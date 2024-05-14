@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var contador = true
+        while (contador == true){
+        var opcao = prompt("Escolha uma opção\n\
+        1. Calcular Área do Triângulo \n\
+        2. Calcular Área do Retângulo\n\
+        3. Calcular Volume do Cubo \n\
+        4. Calcular Área do Círculo \n\
+        5. Sair \n\
+        ")
+
+        var resultado
+
+        switch(opcao){
+            case "1":
+            var base = parseFloat(prompt("Digite a base do Triângulo em centímetros: "));
+            var altura = parseFloat(prompt("Digite a altura do Triângulo em centímetros: "));
+            var area = (base*altura)/2;
+            resultado = alert(`O resultado é ${area} cm²`);
+            contador = false;
+            break;
+
+            case "2":
+            var base = parseFloat(prompt("Digite a base do Retângulo em centímetros: "));
+            var altura = parseFloat(prompt("Digite a altura do Retângulo em centímetros: "));
+            var area = (base*altura);
+            resultado = alert(`O resultado é ${area} cm²`);
+            contador = false;
+            break;
+
+            case "3":
+            var aresta = parseFloat(prompt("Digite a aresta do cubo em centímetros: "));
+            var volume = (aresta**3)
+            resultado = alert(`O resultado é ${volume} cm³`);
+            contador = false;
+            break;
+
+            case "4":
+            var raio = parseFloat(prompt("Digite raio do círculo em centímetros: "));
+            var area = (Math.PI*(raio**2))
+            resultado = alert(`O resultado é ${area} cm²`);
+            contador = false;
+            break;
+
+            case "5":
+            contador = false;
+            break;
+
+            default:
+                resultado = alert('Opção inválida');
+        }
+        
+    }
+    </script>
+</body>
+</html>
